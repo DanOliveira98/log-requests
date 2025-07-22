@@ -8,12 +8,12 @@ use Samfelgar\LogRequests\Http\Middleware\LogRequest;
 
 class LogRequestServiceProvider extends ServiceProvider
 {
-    public function register()
+    public function register(): void
     {
         $this->mergeConfigFrom(__DIR__ . '/../../config/log-requests.php', 'log-requests');
     }
 
-    public function boot()
+    public function boot(): void
     {
         $this->publishConfig();
 
